@@ -3,18 +3,11 @@ import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
 import { Header } from '../../components/Header';
-import Food from '../../components/Food';
+import { Food, FoodProps } from '../../components/Food';
 import ModalAddFood from '../../components/ModalAddFood';
 import ModalEditFood from '../../components/ModalEditFood';
 
 import * as S from './styles';
-
-type FoodProps = {
-  id: number
-  name: string
-  description: string
-  price: number
-}
 
 export function Dashboard() {
   const [foods, setFoods] = useState<FoodProps[]>([])
