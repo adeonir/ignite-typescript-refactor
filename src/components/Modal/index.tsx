@@ -43,5 +43,3 @@ export const Modal = ({ children, isOpen, setIsOpen }: ModalProps) => {
     </ReactModal>
   );
 };
-
-export default Modal;

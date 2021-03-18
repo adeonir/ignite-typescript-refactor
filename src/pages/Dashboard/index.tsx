@@ -4,7 +4,7 @@ import api from '../../services/api';
 
 import { Header } from '../../components/Header';
 import { Food, FoodProps } from '../../components/Food';
-import ModalAddFood from '../../components/ModalAddFood';
+import { ModalAddFood } from '../../components/ModalAddFood';
 import ModalEditFood from '../../components/ModalEditFood';
 
 import * as S from './styles';

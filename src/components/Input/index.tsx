@@ -3,6 +3,7 @@ import {
   useRef,
   useState,
   useCallback,
+  InputHTMLAttributes,
 } from 'react';
 import { IconType } from 'react-icons';
 import { useField } from '@unform/core';
@@ -12,9 +13,9 @@ import * as S from './styles';
 type InputProps = {
   name: string
   icon?: IconType
-}
+} & InputHTMLAttributes<HTMLInputElement>
 
-const Input = ({ name, icon: Icon, ...rest }: InputProps) => {
+export const Input = ({ name, icon: Icon, ...rest }: InputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -54,5 +55,3 @@ const Input = ({ name, icon: Icon, ...rest }: InputProps) => {
     </S.Container>
   );
 };
-
-export default Input;
